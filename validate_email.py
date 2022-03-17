@@ -26,7 +26,7 @@ class Verify:
     verified = False
     divide_email: list = email.split("@")
     divide_email_domain: list = divide_email[1].split(".")
-    special_characters: str = "!#$%&'*+-/?^_{|."
+    special_characters: str = "!#$%&'*+-/?^_{|"
     allowed_letter_domain = ['g', 'y', 'r']
     allowed_workspace_domain = ['cjc', 'ppl', 'prs']
     allowed_domain = ['com', 'net', 'org', 'edu']
@@ -52,7 +52,8 @@ class Verify:
                         if(divide_email[1].count('.') == 1 ):
 
                             if(divide_email_domain[1] in allowed_domain):
-                                print(divide_email_domain)
+                                
+                                print(str(divide_email) +" "+ str(divide_email_domain))
                                 return "Email is valid"
 
                             else:
